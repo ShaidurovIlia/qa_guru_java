@@ -15,6 +15,6 @@ jobs:
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '17'
-      - run: npm install -g bats
+      - uses: Xotabu4/selenoid-github-action@v2
         #Запускаем тесты
-      - run: ./gradlew clean test
+      - run: ./gradlew clean test -Dselenide.remote=http://localhost:4444/wd/hub

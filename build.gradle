@@ -24,6 +24,11 @@ allure {
     }
 }
 
+test {
+    useJUnitPlatform()
+    systemProperties(System.getProperties())
+}
+
 tasks.withType(Test) {
     // Устанавливаем явную кодировку для выполнения тестов
     systemProperty 'file.encoding', 'UTF-8'
