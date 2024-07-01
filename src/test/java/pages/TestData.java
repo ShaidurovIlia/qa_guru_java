@@ -10,19 +10,19 @@ import java.util.concurrent.ThreadLocalRandom;
 public class TestData {
     Faker faker = new Faker();
 
-    String firstName = faker.name().firstName();
-    String lastName = faker.name().lastName();
-    String email = faker.internet().emailAddress();
-    String gender = getRandomValue("Male", "Female", "Other");
-    String phone = String.valueOf(faker.number().numberBetween(9151111111L, 9269999999L));
-    String[] dayMonthYear = getRandomDate(18, 65);
-    String dateOfBirth = String.format("%s %s,%s", dayMonthYear[0], dayMonthYear[1], dayMonthYear[2]);
-    String subject = getRandomValue("Math", "Chemistry", "Physics", "Computer Science", "English", "History");
-    String hobbies = getRandomValue("Sports", "Reading", "Music");
-    String picture = "forTest.jpg";
-    String address = faker.address().streetAddress();
-    String state = getRandomValue("NCR", "Uttar Pradesh", "Haryana", "Rajasthan");
-    String city = getCity(state);
+    public String firstName = faker.name().firstName();
+    public String lastName = faker.name().lastName();
+    public String email = faker.internet().emailAddress();
+    public String gender = getRandomValue("Male", "Female", "Other");
+    public String phone = String.valueOf(faker.number().numberBetween(9151111111L, 9269999999L));
+    public String[] dayMonthYear = getRandomDate(18, 65);
+    public String dateOfBirth = String.format("%s %s,%s", dayMonthYear[0], dayMonthYear[1], dayMonthYear[2]);
+    public String subject = getRandomValue("Math", "Chemistry", "Physics", "Computer Science", "English", "History");
+    public String hobbies = getRandomValue("Sports", "Reading", "Music");
+    public String picture = "forTest.jpg";
+    public String address = faker.address().streetAddress();
+    public String state = getRandomValue("NCR", "Uttar Pradesh", "Haryana", "Rajasthan");
+    public String city = getCity(state);
 
 
     private String getRandomValue(String... initialValues) {
