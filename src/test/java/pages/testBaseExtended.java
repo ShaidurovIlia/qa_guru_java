@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -11,8 +12,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
-public class TestsBaseExtendet {
+public class testBaseExtended {
     protected RegistrationPage registrationPage = new RegistrationPage();
+
 
     @BeforeAll
     static void beforeAll() {
@@ -34,6 +36,7 @@ public class TestsBaseExtendet {
     @BeforeEach
     void addListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        removeFixedElements();
     }
 
     @AfterEach
@@ -42,5 +45,10 @@ public class TestsBaseExtendet {
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
+    }
+
+    void removeFixedElements() {
+        Selenide.executeJavaScript("$('#fixedban').remove()");
+        Selenide.executeJavaScript("$('footer').remove()");
     }
 }
