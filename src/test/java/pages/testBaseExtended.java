@@ -36,7 +36,6 @@ public class testBaseExtended {
     @BeforeEach
     void addListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        removeFixedElements();
     }
 
     @AfterEach
@@ -45,10 +44,5 @@ public class testBaseExtended {
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
-    }
-
-    void removeFixedElements() {
-        Selenide.executeJavaScript("$('#fixedban').remove()");
-        Selenide.executeJavaScript("$('footer').remove()");
     }
 }

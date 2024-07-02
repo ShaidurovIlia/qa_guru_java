@@ -28,7 +28,8 @@ public class RegistrationWithRemoteDriverTest extends testBaseExtended {
         String state = "NCR";
         String city = "Delhi";
 
-        registrationPage.openPage()
+        registrationPage
+                .openPage()
                 .setFirstName(name)
                 .setLastName(lastName)
                 .setEmail(email)
@@ -43,7 +44,8 @@ public class RegistrationWithRemoteDriverTest extends testBaseExtended {
                 .setCity(city)
                 .submit();
 
-        registrationPage.verifyModalAppend()
+        registrationPage
+                .verifyModalAppend()
                 .verifyResult("Student Name", name + " " + lastName)
                 .verifyResult("Student Email", email)
                 .verifyResult("Gender", gender)
