@@ -8,6 +8,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
+import static java.awt.SystemColor.window;
 
 public class RegistrationPage {
 
@@ -103,6 +104,9 @@ public class RegistrationPage {
 
     public RegistrationPage setAddress(String value) {
         addressInput.setValue(value);
+
+        executeJavaScript("window.scrollTo(0, document.body.scrollHeight);");
+
         return this;
     }
 

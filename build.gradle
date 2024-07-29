@@ -38,7 +38,12 @@ dependencies {
             'com.opencsv:opencsv:5.9',
             'com.google.code.gson:gson:2.11.0',
             'com.github.javafaker:javafaker:1.0.2',
-            'io.qameta.allure:allure-selenide:2.27.0'
+            'io.qameta.allure:allure-selenide:2.27.0',
+            'io.rest-assured:rest-assured:5.5.0',
+            'com.fasterxml.jackson.core:jackson-databind:2.17.2',
+            'org.projectlombok:lombok:1.18.34',
+            'org.aspectj:aspectjweaver:1.9.22.1',
+            'io.qameta.allure:allure-rest-assured:2.27.0'
     )
 }
 
