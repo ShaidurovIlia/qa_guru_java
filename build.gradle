@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'io.qameta.allure' version '2.11.2'
+    id 'io.freefair.lombok' version '8.6'
 }
 
 tasks.withType(JavaCompile) {
@@ -41,7 +42,6 @@ dependencies {
             'io.qameta.allure:allure-selenide:2.27.0',
             'io.rest-assured:rest-assured:5.5.0',
             'com.fasterxml.jackson.core:jackson-databind:2.17.2',
-            'org.projectlombok:lombok:1.18.34',
             'org.aspectj:aspectjweaver:1.9.22.1',
             'io.qameta.allure:allure-rest-assured:2.27.0'
     )
